@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -192,6 +191,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .flex {
     display: flex;
   }
@@ -207,8 +209,20 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
+  }
+  .max-w-95 {
+    max-width: calc(var(--spacing) * 95);
+  }
+  .max-w-100 {
+    max-width: calc(var(--spacing) * 100);
+  }
+  .max-w-160 {
+    max-width: calc(var(--spacing) * 160);
   }
   .max-w-sm {
     max-width: var(--container-sm);
@@ -237,6 +251,21 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-9 {
+    gap: calc(var(--spacing) * 9);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
@@ -255,6 +284,9 @@
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-\[32px\] {
     font-size: 32px;
@@ -288,24 +320,10 @@
       }
     }
   }
-  .hover\:bg-\[\#434faf\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #434faf;
-      }
-    }
-  }
   .hover\:bg-\[\#3644af\] {
     &:hover {
       @media (hover: hover) {
         background-color: #3644af;
-      }
-    }
-  }
-  .hover\:bg-\[\#6173FF\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #6173FF;
       }
     }
   }
@@ -320,10 +338,20 @@ body {
 }
 h1, h3, h2 {
   font-weight: 600;
+  color: #4C545D;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
 }
 p {
   font-weight: 400;
   color: #9FABB2;
+}
+#head-text {
+  margin-bottom: 6rem;
 }
 @property --tw-border-style {
   syntax: "*";

@@ -15,44 +15,56 @@
 
 <body>
     <main>
-        <section >
-            <div id="hero-container"> 
+        <section>
+            <div id="hero-container">
                 <!-- Might put h-screen onto the hero container instead -->
                 <div class="h-screen flex flex-col items-center justify-center gap-4">
-                    <img src=/assets/images/logo.svg>
-                    <h1 class="text-[32px] text-[#4C545D]">A History of everything you copy</h1>
-                    <p>Clipboard allows you to track and organize everything you copy. Instantly access your clipboard
-                        on
-                        all your dedvices.</p>
+                    <div class="flex flex-col items-center justify-center gap-4 mb-10 max-w-160 text-center">
+                        <img src=/assets/images/logo.svg>
+                        <h1 class="text-[32px] text-[#4C545D]">A History of everything you copy</h1>
+                        <p>Clipboard allows you to track and organize everything you copy. Instantly access your
+                            clipboard
+                            on
+                            all your dedvices.</p>
+                    </div>
                     <div id="button-container" class="flex flex-row gap-4 w-full max-w-sm mx-auto h-12">
-                        <button class="w-full hover:bg-[#1c8676] transition flex items-center justify-center py-4 px-6 font-semibold bg-[#26BAA4] text-white rounded-3xl cursor-pointer">Download for iOS</button>
-                        <button class="w-full hover:bg-[#3644af] transition flex items-center justify-center py-4 px-6 font-semibold bg-[#6173FF] text-white rounded-3xl cursor-pointer">Download for Mac</button>
+                        <button
+                            class="w-full hover:bg-[#1c8676] transition flex items-center justify-center py-4 px-6 font-semibold bg-[#26BAA4] text-white rounded-3xl cursor-pointer">Download
+                            for iOS</button>
+                        <button
+                            class="w-full hover:bg-[#3644af] transition flex items-center justify-center py-4 px-6 font-semibold bg-[#6173FF] text-white rounded-3xl cursor-pointer">Download
+                            for Mac</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="min-h-screen">
-            <div id="section1-container" class="h-screen flex flex-col items-center justify-center">
-                <div id="head-text">
+            <div id="section1-container" class="h-screen flex flex-col items-center">
+                <div id="head-text" class="flex flex-col items-center max-w-160 text-center gap-5">
                     <h2>Keep track of your snippets</h2>
                     <p>Clipboardd instantly stores any item you copy in the cloud, meaning you can access your snippets
                         immediately on all your devices. Our Mac and iOS apps will help you organize everything.</p>
                 </div>
                 <div id="section">
-                    <div id="section1-text">
-                        <img src="/assets/images/image-computer.png" alt="An image of a computer monitor.">
-                        <div>
-                            <h3>Quick Search</h3>
-                            <p>Easily search your snippets by content, category, web address, application, and more.</p>
-                        </div>
-                        <div>
-                            <h3>iCloud Sync</h3>
-                            <p>Instantly saves and syncs snippets accross all your devices.</p>
-                        </div>
-                        <div>
-                            <h3>Complete History</h3>
-                            <p>Retrieve any snippets from the first moment you starte using the app.</p>
+                    <div id="section1-text" class="flex gap-20">
+                        <img src="/assets/images/image-computer.png" alt="An image of a computer monitor."
+                            class="w-fit">
+
+                        <div class="flex flex-col gap-9 max-w-95 justify-center">
+                            <div>
+                                <h3>Quick Search</h3>
+                                <p>Easily search your snippets by content, category, web address, application, and more.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>iCloud Sync</h3>
+                                <p>Instantly saves and syncs snippets accross all your devices.</p>
+                            </div>
+                            <div>
+                                <h3>Complete History</h3>
+                                <p>Retrieve any snippets from the first moment you starte using the app.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
