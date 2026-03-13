@@ -8,7 +8,10 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --font-weight-semibold: 600;
     --radius-3xl: 1.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,11 +168,29 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
-  }
   .start {
     inset-inline-start: var(--spacing);
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .mx-auto {
+    margin-inline: auto;
   }
   .flex {
     display: flex;
@@ -177,14 +198,20 @@
   .table {
     display: table;
   }
-  .h-full {
-    height: 100%;
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-screen {
     height: 100vh;
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -198,14 +225,17 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
   }
   .justify-center {
     justify-content: center;
   }
-  .gap-1\.5 {
-    gap: calc(var(--spacing) * 1.5);
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
@@ -214,11 +244,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-black {
-    background-color: var(--color-black);
+  .bg-\[\#26BAA4\] {
+    background-color: #26BAA4;
   }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
+  .bg-\[\#6173FF\] {
+    background-color: #6173FF;
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -226,11 +259,15 @@
   .text-\[32px\] {
     font-size: 32px;
   }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
   .text-\[\#4C545D\] {
     color: #4C545D;
   }
-  .text-\[\#f1f1f1\] {
-    color: #f1f1f1;
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -243,6 +280,34 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .hover\:bg-\[\#1c8676\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1c8676;
+      }
+    }
+  }
+  .hover\:bg-\[\#434faf\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #434faf;
+      }
+    }
+  }
+  .hover\:bg-\[\#3644af\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #3644af;
+      }
+    }
+  }
+  .hover\:bg-\[\#6173FF\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #6173FF;
+      }
+    }
   }
 }
 * {
@@ -265,6 +330,10 @@ p {
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -274,6 +343,7 @@ p {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
   }
