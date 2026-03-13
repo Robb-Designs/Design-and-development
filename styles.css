@@ -1,5 +1,10 @@
+@import "tailwindcss";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Run this command to scan files to update and create output css
+npx @tailwindcss/cli -i /styles.css -o /output.css --watch */
