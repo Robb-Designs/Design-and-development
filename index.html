@@ -10,21 +10,23 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 </head>
 
 <body>
     <main>
-        <section>
-            <div id="hero-container">
-                <div id="hero-content">
+        <section class="min-h-screen">
+            <div id="hero-container"> 
+                <!-- Might put h-screen onto the hero container instead -->
+                <div class="h-screen flex flex-col items-center justify-center">
                     <img src=/assets/images/logo.svg>
-                    <h1>A History of everything you copy</h1>
+                    <h1 class="text-[32px] text-[#4C545D]">A History of everything you copy</h1>
                     <p>Clipboard allows you to track and organize everything you copy. Instantly access your clipboard
                         on
                         all your dedvices.</p>
                     <div id="button-container">
-                        <button>Download for iOS</button>
-                        <button>Download for Mac</button>
+                        <button class="cursor-pointer relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition">Download for iOS</button>
+                        <button class="cursor-pointer relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition">Download for Mac</button>
                     </div>
                 </div>
             </div>

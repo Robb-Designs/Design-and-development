@@ -7,4 +7,17 @@
 }
 
 /* Run this command to scan files to update and create output css
-npx @tailwindcss/cli -i /styles.css -o /output.css --watch */
+npx @tailwindcss/cli -i ./styles.css -o ./output.css --watch */
+
+body{
+    font-family:  "Bai Jamjuree", sans-serif;
+}
+
+h1, h3, h2{
+   font-weight: 600; 
+}
+
+p{
+    font-weight: 400;
+    color: #9FABB2;
+}
